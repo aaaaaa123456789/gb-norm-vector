@@ -692,8 +692,8 @@ NormalizeVector::
 	add sp, 4
 	pop de
 	pop hl
-	ld a, b
-	or c
+	ld a, d
+	or e
 	jr nz, :+
 	ld d, l
 	:
