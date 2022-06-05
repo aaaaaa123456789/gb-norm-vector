@@ -13,7 +13,7 @@ ENDC
 
 MACRO ___addproduct
 	; ahl += \1 * \2
-	; requires \3 = 0
+	; requires \3 = 0 and exits with \2 = 0
 	:
 	srl \2
 	jr nc, :+
@@ -463,6 +463,7 @@ NormalizeVector::
 	cpl
 	add a, $11
 	ld e, a
+	; work around bad emulators that implement daa incorrectly -- otherwise this would be daa; cp e
 	ld a, 0
 	daa
 	jr z, :+
