@@ -695,7 +695,7 @@ NormalizeVector::
 	ld a, b
 	or c
 	jr nz, :+
-	ld b, l
+	ld d, l
 	:
 	srl h
 	jr c, :+
@@ -707,7 +707,7 @@ NormalizeVector::
 	ld e, a
 	:
 	srl h
-	jr nc, :+
+	jr nc, .first_positive
 	ld a, b
 	cpl
 	ld b, a
@@ -715,9 +715,9 @@ NormalizeVector::
 	cpl
 	ld c, a
 	___safeinc bc
-	:
+.first_positive
 	srl h
-	jr nc, :+
+	jr nc, .second_positive
 	ld a, d
 	cpl
 	ld d, a
@@ -725,7 +725,7 @@ NormalizeVector::
 	cpl
 	ld e, a
 	___safeinc de
-	:
+.second_positive
 	rra ; clear zero flag
 .done
 	pop hl
