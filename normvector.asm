@@ -44,7 +44,7 @@ VectorNormalizationTables:
 
 .unitvectors
 	; for x = $20 to $40, for y = 1 to $40: x/sqrt(x^2 + y^2), y/sqrt(x^2 + y^2), in 0.16 fixed point
-	; 8 rows per x value, 8 y values per row, 16 table entries per row, $1040 entries total
+	; 8 rows per x value, 8 y values per row, 16 table entries per row, $1080 entries total
 	dw $ffe0, $07ff, $ff80, $0ff8, $fee2, $17e5, $fe06, $1fc1, $fcee, $2785, $fb9e, $2f2e, $fa16, $36b5, $f85b, $3e17
 	dw $f670, $4550, $f459, $4c5c, $f219, $5338, $efb3, $59e3, $ed2d, $605a, $ea89, $669c, $e7cc, $6ca8, $e4f9, $727d
 	dw $e214, $781b, $df20, $7d82, $dc1f, $82b3, $d916, $87ae, $d607, $8c75, $d2f4, $9108, $cfe0, $9569, $cccd, $999a
