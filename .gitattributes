@@ -1,0 +1,7 @@
+* eol=lf
+
+*.asm text
+*.c text
+*.md text
+LICENSE text
+Makefile text

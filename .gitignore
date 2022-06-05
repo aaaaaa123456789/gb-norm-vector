@@ -1,0 +1,8 @@
+*.gb
+*.gbc
+*.sym
+*.map
+*.o
+*.sav
+generator
+generator.exe
