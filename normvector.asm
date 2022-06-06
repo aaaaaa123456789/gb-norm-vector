@@ -412,7 +412,7 @@ NormalizeVector::
 
 .adjusted
 	ld a, b
-	rla
+	rlca
 	swap a
 	and $1f
 	add a, HIGH(VectorNormalizationTables.unitvectors)

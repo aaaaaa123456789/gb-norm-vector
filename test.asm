@@ -158,6 +158,7 @@ Init:
 	ldh [rLCDC], a
 	ld de, 0
 	ld b, d
+	ld c, e
 	ret
 
 ReadJoypad:
@@ -173,8 +174,6 @@ ReadJoypad:
 	or $f0
 	inc a
 	ret
-
-	ds 1
 
 Font:
 	db $00, $00, $00, $00, $00, $00, $00, $00 ;blank
