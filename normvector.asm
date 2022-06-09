@@ -463,7 +463,6 @@ NormalizeVector::
 	cpl
 	add a, $11
 	ld e, a
-	; work around bad emulators that implement daa incorrectly -- otherwise this would be daa; cp e
 	ld a, 0
 	daa
 	jr z, :+
