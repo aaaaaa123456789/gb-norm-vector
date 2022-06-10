@@ -37,6 +37,10 @@ However, if both inputs are non-negative, the output can be treated as unsigned,
 the only way unsigned overflow can occur is if `a` is zero and one of the coordinates is also zero (because the
 normalized vector would be (`$10000`, `$0000`) in that case).
 
+If the `GBC` constant is defined at assembly time (e.g., via `DEF GBC EQU 1`, or simply `-DGBC` on the RGBASM command
+line), the library will use simple 16-bit increments (e.g., `inc bc`) on arbitrary data.
+Otherwise, in order to avoid [the OAM bug][OAMbug], the library will only use 8-bit increments on non-pointer values.
+
 ## Performance and accuracy
 
 (TBD, pending test results)
@@ -62,4 +66,5 @@ precision.
 Therefore, this library allows the user to choose the desired length, and performs the multiplication internally at a
 higher precision before reducing and returning the normalized vector.
 
+[OAMbug]: https://gbdev.io/pandocs/OAM_Corruption_Bug.html
 [RGBDS]: https://github.com/gbdev/rgbds
