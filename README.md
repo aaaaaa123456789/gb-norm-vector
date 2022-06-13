@@ -16,7 +16,9 @@ The `extra` directory contains some additional files that may be of interest:
 - [`Makefile`](extra/Makefile): makefile to build the test ROM.
 - [`generator.c`](extra/generator.c): C program used to generate the unit vectors lookup table in the library;
   included for completeness and ease of verification.
-- (test results TBD)
+- [`testdata.md`](extra/testdata.md): test results from which [performance and accuracy](#performance-and-accuracy)
+  information was calculated.
+- [`testdata.csv`](extra/testdata.csv): raw test results used to write the test results report.
 
 Everything in this repository is released to the public domain under [the Unlicense](LICENSE).
 
