@@ -8,4 +8,4 @@ test.gb: test.o normvector.o
 	rgbasm -p 0xff -DGBC $^ -o $@
 
 clean:
-	rm -f *.gb *.o
+	rm -f *.gb *.o *.sym *.map
