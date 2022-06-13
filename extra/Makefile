@@ -7,5 +7,8 @@ test.gb: test.o normvector.o
 %.o: %.asm
 	rgbasm -p 0xff -DGBC $^ -o $@
 
+normvector.asm: ../normvector.asm
+	cp $< $@
+
 clean:
-	rm -f *.gb *.o *.sym *.map
+	rm -f *.gb *.o *.sym *.map normvector.asm

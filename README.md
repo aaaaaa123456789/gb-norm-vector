@@ -5,16 +5,17 @@ to a user-defined length.
 
 The library is available in the [`normvector.asm`](normvector.asm) file, and it requires [RGBDS] version 0.5.0 or
 newer (0.5.1 required for the test ROM).
-Other files of interest in the repository are:
 
-- [`test.asm`](test.asm): TPP1-based test ROM that will generate a 2 MB save file containing results for a large
+The `extra` directory contains some additional files that may be of interest:
+
+- [`test.asm`](extra/test.asm): TPP1-based test ROM that will generate a 2 MB save file containing results for a large
   number of executions.
   Used to test the library.
   The test ROM will also execute the `NormalizeVector` function early on during initialization (discarding the result)
   to facilitate quick debugging.
-- [`Makefile`](Makefile): makefile to build the test ROM.
-- [`generator.c`](generator.c): C program used to generate the unit vectors lookup table in the library; included for
-  completeness and ease of verification.
+- [`Makefile`](extra/Makefile): makefile to build the test ROM.
+- [`generator.c`](extra/generator.c): C program used to generate the unit vectors lookup table in the library;
+  included for completeness and ease of verification.
 - (test results TBD)
 
 Everything in this repository is released to the public domain under [the Unlicense](LICENSE).
